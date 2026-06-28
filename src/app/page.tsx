@@ -257,12 +257,12 @@ export default function Home() {
 
       {/* Desktop Optimized Navigation */}
       <header className="sticky top-0 w-full z-50 bg-[#f5ece7] shadow-sm">
-        <div className="max-w-[1440px] mx-auto flex justify-between items-center px-margin-desktop py-5">
-          <a className="font-display-lg text-2xl text-primary tracking-[0.2em] uppercase" href="#" onClick={(e) => handleScroll(e, '#')}>Bhakti &amp; Nana</a>
-          <nav className="flex gap-12 items-center">
-            <a className="text-primary font-bold font-label-caps text-sm tracking-widest relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-primary" href="#" onClick={(e) => handleScroll(e, '#')}>Home</a>
-            <a className="text-on-surface-variant/80 hover:text-primary transition-colors duration-300 font-label-caps text-sm tracking-widest" href="#about" onClick={(e) => handleScroll(e, '#about')}>Our Story</a>
-            <a className="text-on-surface-variant/80 hover:text-primary transition-colors duration-300 font-label-caps text-sm tracking-widest" href="#schedule" onClick={(e) => handleScroll(e, '#schedule')}>Ceremonies</a>
+        <div className="max-w-[1440px] mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop py-3 md:py-5">
+          <a className="font-display-lg text-xl md:text-2xl text-primary tracking-[0.2em] uppercase" href="#" onClick={(e) => handleScroll(e, '#')}>Bhakti &amp; Nana</a>
+          <nav className="flex gap-3 sm:gap-6 md:gap-12 items-center">
+            <a className="text-primary font-bold font-label-caps text-[10px] sm:text-xs md:text-sm tracking-widest relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-primary hidden sm:block" href="#" onClick={(e) => handleScroll(e, '#')}>Home</a>
+            <a className="text-on-surface-variant/80 hover:text-primary transition-colors duration-300 font-label-caps text-[10px] sm:text-xs md:text-sm tracking-widest hidden sm:block" href="#about" onClick={(e) => handleScroll(e, '#about')}>Our Story</a>
+            <a className="text-on-surface-variant/80 hover:text-primary transition-colors duration-300 font-label-caps text-[10px] sm:text-xs md:text-sm tracking-widest hidden sm:block" href="#schedule" onClick={(e) => handleScroll(e, '#schedule')}>Ceremonies</a>
             <button onClick={toggleMusic} className="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant/50 text-primary hover:bg-primary-fixed-dim transition-all group">
               <span className="material-symbols-outlined group-hover:scale-110 transition-transform">{isPlaying ? 'music_off' : 'music_note'}</span>
             </button>
@@ -292,7 +292,7 @@ export default function Home() {
             </div>
             <div className="scroll-reveal active delay-200 flex flex-col items-center">
               <span className="font-label-caps text-sm md:text-base tracking-[0.4em] text-white/90 uppercase drop-shadow-md mb-6">WEDDING INVITATION</span>
-              <h1 className="font-display-lg text-7xl md:text-[120px] leading-none gold-shimmer tracking-tighter mb-0">
+              <h1 className="font-display-lg text-6xl sm:text-7xl md:text-[120px] leading-none gold-shimmer tracking-tighter mb-0">
                 Bhakti <span className="text-white/80 font-normal serif italic">&amp;</span> Nana
               </h1>
               <div className="h-px w-48 bg-secondary-fixed mx-auto mt-4 mb-2 opacity-60"></div>
@@ -304,22 +304,22 @@ export default function Home() {
             </div>
 
             {/* Prominent Countdown Timer */}
-            <div className="grid grid-cols-4 gap-8 md:gap-16 bg-[#570000]/40 backdrop-blur-md p-6 md:p-12 rounded-3xl shadow-2xl scroll-reveal active delay-500 mt-2">
-              <div className="flex flex-col gap-2">
-                <span className="font-display-lg text-5xl md:text-8xl text-[#ffe088] drop-shadow-md">{days}</span>
-                <span className="font-label-caps text-xs md:text-sm tracking-widest text-white/90">DAYS</span>
+            <div className="grid grid-cols-4 gap-3 sm:gap-8 md:gap-16 bg-[#570000]/40 backdrop-blur-md p-4 sm:p-6 md:p-12 rounded-2xl md:rounded-3xl shadow-2xl scroll-reveal active delay-500 mt-2">
+              <div className="flex flex-col gap-1 md:gap-2">
+                <span className="font-display-lg text-3xl sm:text-5xl md:text-8xl text-[#ffe088] drop-shadow-md">{days}</span>
+                <span className="font-label-caps text-[9px] sm:text-xs md:text-sm tracking-widest text-white/90">DAYS</span>
               </div>
-              <div className="flex flex-col gap-2">
-                <span className="font-display-lg text-5xl md:text-8xl text-[#ffe088] drop-shadow-md">{hours}</span>
-                <span className="font-label-caps text-xs md:text-sm tracking-widest text-white/90">HOURS</span>
+              <div className="flex flex-col gap-1 md:gap-2">
+                <span className="font-display-lg text-3xl sm:text-5xl md:text-8xl text-[#ffe088] drop-shadow-md">{hours}</span>
+                <span className="font-label-caps text-[9px] sm:text-xs md:text-sm tracking-widest text-white/90">HOURS</span>
               </div>
-              <div className="flex flex-col gap-2">
-                <span className="font-display-lg text-5xl md:text-8xl text-[#ffe088] drop-shadow-md">{minutes}</span>
-                <span className="font-label-caps text-xs md:text-sm tracking-widest text-white/90">MINUTES</span>
+              <div className="flex flex-col gap-1 md:gap-2">
+                <span className="font-display-lg text-3xl sm:text-5xl md:text-8xl text-[#ffe088] drop-shadow-md">{minutes}</span>
+                <span className="font-label-caps text-[9px] sm:text-xs md:text-sm tracking-widest text-white/90">MINUTES</span>
               </div>
-              <div className="flex flex-col gap-2">
-                <span className="font-display-lg text-5xl md:text-8xl text-[#ffe088] drop-shadow-md">{seconds}</span>
-                <span className="font-label-caps text-xs md:text-sm tracking-widest text-white/90">SECONDS</span>
+              <div className="flex flex-col gap-1 md:gap-2">
+                <span className="font-display-lg text-3xl sm:text-5xl md:text-8xl text-[#ffe088] drop-shadow-md">{seconds}</span>
+                <span className="font-label-caps text-[9px] sm:text-xs md:text-sm tracking-widest text-white/90">SECONDS</span>
               </div>
             </div>
 
@@ -331,15 +331,15 @@ export default function Home() {
         </section>
 
         {/* Wide Story Section */}
-        <section className="py-section-gap px-margin-desktop max-w-[1440px] mx-auto scroll-reveal" id="about">
-          <div className="flex flex-col items-center text-center mb-24">
+        <section className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto scroll-reveal" id="about">
+          <div className="flex flex-col items-center text-center mb-16 md:mb-24">
             <span className="material-symbols-outlined text-secondary text-5xl mb-6" style={{ fontVariationSettings: "'FILL' 1" }}>local_florist</span>
-            <h2 className="font-display-lg text-5xl md:text-6xl text-primary mb-6">Us Together</h2>
+            <h2 className="font-display-lg text-4xl sm:text-5xl md:text-6xl text-primary mb-6">Us Together</h2>
             <div className="w-32 h-1.5 bg-secondary rounded-full"></div>
           </div>
-          <div className="grid grid-cols-12 gap-10">
+          <div className="grid grid-cols-12 gap-6 md:gap-10">
             {/* Left: Large Cinematic Image */}
-            <div className="col-span-12 lg:col-span-7 relative h-[700px] rounded-3xl overflow-hidden shadow-2xl group">
+            <div className="col-span-12 lg:col-span-7 relative h-[400px] md:h-[700px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl group">
               <div className="absolute inset-0 w-full h-full transition-transform duration-1000 group-hover:scale-105">
                 {slides.map((slide, index) => (
                   <img 
@@ -360,7 +360,7 @@ export default function Home() {
               <div className="relative h-[330px] rounded-3xl overflow-hidden shadow-xl border border-outline-variant group">
                 <img alt="Henna Detail" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQrv2HxfDAmT3lVJWABU2MzAsrKgWF2V3qToy-l4o6g7RIjlDaMhrJyJ-mEm4cFLUNpvotJqvZ7rKodOS1kRd7wLMJ9DrWPTCWdufNrCQUQA6nYPfxofqYMwZ0mZv0pQZHet3R6dTrhg2omqGdSXACKKgZMPjP-V45ohA9hWGPLzVFVPpwceYPlLloAfkhRWIsTOROdZMS0kpSElYu6rAVQ8qA4rl28-Nu9Wg7ZhY44TuLPQLuhJWPA86rwc7myYik2OJ1CChEb2yh"/>
               </div>
-              <div className="flex-grow bg-primary p-12 rounded-3xl text-center flex flex-col justify-center items-center shadow-2xl relative overflow-hidden">
+              <div className="flex-grow bg-primary p-8 md:p-12 rounded-2xl md:rounded-3xl text-center flex flex-col justify-center items-center shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-40 h-40 opacity-5 text-white mandala-texture"></div>
                 <span className="material-symbols-outlined text-6xl mb-8 text-secondary-fixed" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
                 <p className="font-display-lg text-3xl md:text-4xl text-secondary-fixed italic leading-relaxed">
@@ -373,7 +373,7 @@ export default function Home() {
 
         {/* Desktop Ceremonies Grid */}
         <section className="py-section-gap bg-surface-container relative overflow-hidden" id="schedule">
-          <div className="max-w-[1440px] mx-auto px-margin-desktop relative z-10">
+          <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
             <div className="text-center mb-24">
               <h2 className="font-display-lg text-5xl md:text-6xl text-primary">The Celebration</h2>
               <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto mt-6">Join us as we celebrate our love across three beautiful ceremonies.</p>
@@ -415,7 +415,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-primary text-secondary-fixed py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none mandala-texture bg-white"></div>
-        <div className="max-w-[1440px] mx-auto px-margin-desktop text-center flex flex-col items-center gap-12 relative z-10">
+        <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop text-center flex flex-col items-center gap-12 relative z-10">
           <h2 className="font-display-lg text-6xl text-secondary-fixed tracking-[0.2em]">B &amp; N</h2>
           <div className="flex flex-wrap justify-center gap-16 font-label-caps text-sm tracking-[0.2em]">
             <a className="text-white/60 hover:text-secondary-fixed transition-all uppercase" href="#" onClick={(e) => handleScroll(e, '#')}>Home</a>
