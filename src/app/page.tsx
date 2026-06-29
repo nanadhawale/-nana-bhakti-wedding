@@ -339,17 +339,17 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-12 gap-6 md:gap-10">
             {/* Left: Large Cinematic Image */}
-            <div className="col-span-12 lg:col-span-7 relative h-[400px] md:h-[700px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl group">
-              <div className="absolute inset-0 w-full h-full bg-black">
+            <div className="col-span-12 lg:col-span-7 flex flex-col rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl bg-primary">
+              <div className="relative h-[300px] sm:h-[400px] md:h-[550px] w-full bg-black">
                 <iframe 
                   src="https://drive.google.com/file/d/1mZqAzI5N1NbYIkS3myPHyzbEC570t7vv/preview" 
                   className="w-full h-full border-0"
                   allow="autoplay"
                 ></iframe>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex flex-col justify-end p-6 md:p-16 pointer-events-none">
-                <p className="font-label-caps text-secondary-fixed text-sm md:text-lg mb-2 md:mb-4 tracking-[0.2em] drop-shadow-md">THE FIRST MEETING</p>
-                <h3 className="font-display-lg text-3xl md:text-5xl text-white drop-shadow-md">Where our forever began</h3>
+              <div className="flex flex-col justify-center p-8 md:p-12 text-center md:text-left">
+                <p className="font-label-caps text-secondary-fixed text-sm md:text-lg mb-2 md:mb-4 tracking-[0.2em]">THE FIRST MEETING</p>
+                <h3 className="font-display-lg text-3xl md:text-5xl text-white">Where our forever began</h3>
               </div>
             </div>
             {/* Right: Grid of Detail & Quote */}
