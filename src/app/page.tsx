@@ -340,25 +340,29 @@ export default function Home() {
           <div className="grid grid-cols-12 gap-6 md:gap-10">
             {/* Left: Large Cinematic Image */}
             <div className="col-span-12 lg:col-span-7 relative h-[400px] md:h-[700px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl group">
-              <div className="absolute inset-0 w-full h-full transition-transform duration-1000 group-hover:scale-105">
-                {slides.map((slide, index) => (
-                  <img 
-                    key={index}
-                    alt={`Us Together ${index + 1}`} 
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${currentSlide === index ? 'opacity-100 z-10' : 'opacity-0 z-0'}`} 
-                    src={slide}
-                  />
-                ))}
+              <div className="absolute inset-0 w-full h-full bg-black">
+                <iframe 
+                  src="https://drive.google.com/file/d/1mZqAzI5N1NbYIkS3myPHyzbEC570t7vv/preview" 
+                  className="w-full h-full border-0"
+                  allow="autoplay"
+                ></iframe>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex flex-col justify-end p-16">
-                <p className="font-label-caps text-secondary-fixed text-lg mb-4 tracking-[0.2em]">THE FIRST MEETING</p>
-                <h3 className="font-display-lg text-5xl text-white">Where our forever began</h3>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent flex flex-col justify-end p-6 md:p-16 pointer-events-none">
+                <p className="font-label-caps text-secondary-fixed text-sm md:text-lg mb-2 md:mb-4 tracking-[0.2em] drop-shadow-md">THE FIRST MEETING</p>
+                <h3 className="font-display-lg text-3xl md:text-5xl text-white drop-shadow-md">Where our forever began</h3>
               </div>
             </div>
             {/* Right: Grid of Detail & Quote */}
             <div className="col-span-12 lg:col-span-5 flex flex-col gap-10">
               <div className="relative h-[330px] rounded-3xl overflow-hidden shadow-xl border border-outline-variant group">
-                <img alt="Henna Detail" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQrv2HxfDAmT3lVJWABU2MzAsrKgWF2V3qToy-l4o6g7RIjlDaMhrJyJ-mEm4cFLUNpvotJqvZ7rKodOS1kRd7wLMJ9DrWPTCWdufNrCQUQA6nYPfxofqYMwZ0mZv0pQZHet3R6dTrhg2omqGdSXACKKgZMPjP-V45ohA9hWGPLzVFVPpwceYPlLloAfkhRWIsTOROdZMS0kpSElYu6rAVQ8qA4rl28-Nu9Wg7ZhY44TuLPQLuhJWPA86rwc7myYik2OJ1CChEb2yh"/>
+                {slides.map((slide, index) => (
+                  <img 
+                    key={index}
+                    alt={`Beautiful Moments ${index + 1}`} 
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${currentSlide === index ? 'opacity-100 z-10' : 'opacity-0 z-0'}`} 
+                    src={slide}
+                  />
+                ))}
               </div>
               <div className="flex-grow bg-primary p-8 md:p-12 rounded-2xl md:rounded-3xl text-center flex flex-col justify-center items-center shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-40 h-40 opacity-5 text-white mandala-texture"></div>
@@ -432,7 +436,7 @@ export default function Home() {
 
       {/* Audio Element */}
       <audio ref={audioRef} id="bgMusic" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"/>
+        <source src="/tu_havishi.webm" type="audio/webm"/>
       </audio>
     </>
   );
